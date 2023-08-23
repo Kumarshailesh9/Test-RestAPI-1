@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" onsubmit='adding(event)'>
+        <input type="number" id="no">
+        <input type="submit">
+    </form>
+    <p id="dom"></p>
+    <script>
+         const dom=document.getElementById('dom');
+         let previousInput=0;
+        function adding(e){
+            e.preventDefault();
+            const abc = e.target.no.value;
+           
+           
+                        if (!isNaN(abc)) {
+                                previousInput += parseInt(abc);
+                                dom.textContent = `Result: ${previousInput}`;
+                                abc.value = ''; // Clear the input field
+                            }
+          
+        }
+    </script>
+
+    <!-- <input type="number" id="inputField">
+            <button id="addButton">Add</button>
+     <p id="result"></p>
+
+     <script>
+const inputField = document.getElementById('inputField');
+const addButton = document.getElementById('addButton');
+const resultElement = document.getElementById('result');
+let previousInput = 0;
+
+addButton.addEventListener('click', () => {
+  const inputValue = parseFloat(inputField.value);
+  
+  if (!isNaN(inputValue)) {
+    previousInput += inputValue;
+    resultElement.textContent = `Result: ${previousInput}`;
+    inputField.value = ''; // Clear the input field
+  }
+});
+
+     </script> -->
+
+
+</body>
+</html>

@@ -15,6 +15,7 @@ function expensiveTracker(e){
         cost.value = ''; // Clear the input field
     }
 
+    
     axios
     .post('https://crudcrud.com/api/959f90117194439bbf909b72ba19f9f5/products',productInfo)
     .then((res)=>{
